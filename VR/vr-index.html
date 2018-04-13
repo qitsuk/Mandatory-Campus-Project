@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <title>New EASJ Campus</title>
+</head>
+<body class="a-body ">
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="assets/sky.jpg" crossorigin="anonymous">
+            <img id="plane" src="assets/plane.jpg">
+        </a-assets>
+
+        <a-entity id="cameraRig">
+            <a-entity id="head" camera wasd-controls look-controls position="0 1 0" user-height="2" rotation="0 -90 0">
+                    <a-cursor color="#FF0000" fuse="true" fuseTimeout="1500" maxDistance="3000"/>
+            </a-entity>
+            <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;" gearvr-controls></a-entity>
+            <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;" gearvr-controls></a-entity>
+        </a-entity>
+
+        <a-sky id="The Sky" src="#sky" material="" geometry=""></a-sky>
+        <a-plane width="50" height="50" rotation="-90 0 0" src="#plane" scale="2 2 2" repeat="20 20" material="" geometry=""></a-plane>
+
+
+    </a-scene>
+</body>
+</html>
