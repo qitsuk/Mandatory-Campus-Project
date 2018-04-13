@@ -24,27 +24,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `staff`
---
-
-DROP TABLE IF EXISTS `staff`;
-CREATE TABLE IF NOT EXISTS `staff` (
-  `IsAdmin` int(11) NOT NULL,
-  `FirstName` int(11) NOT NULL,
-  `LastName` int(11) NOT NULL,
-  `Username` int(11) NOT NULL,
-  `Email` int(11) NOT NULL,
-  `Picture` int(11) NOT NULL,
-  `PhoneNumber` int(11) NOT NULL,
-  `Address` int(11) NOT NULL,
-  `Zip` int(11) NOT NULL,
-  `City` int(11) NOT NULL,
-  `Password` int(11) NOT NULL,
-  `ID` int(11) NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `IsAdmin` (`IsAdmin`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
