@@ -981,3 +981,7 @@ preloader
         opacity: 0;
     }
 }
+
+input {
+	padding-left: 10px;
+}
