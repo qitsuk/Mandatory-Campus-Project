@@ -10,7 +10,8 @@ CREATE TABLE CampusDay (
 CREATE TABLE CampusSchedule (
 	WeekDay VARCHAR(10),
     Period INT(3),
-	Class VARCHAR(255)
+	Subject VARCHAR(255), 
+    Class VARCHAR(255)
 );
 
 CREATE TABLE `users` (
