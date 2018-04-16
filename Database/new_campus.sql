@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 16, 2018 at 12:18 PM
+-- Generation Time: Apr 16, 2018 at 12:24 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -30,9 +30,10 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `campusday`;
 CREATE TABLE IF NOT EXISTS `campusday` (
-  `WeekDay` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `WeekDay` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `RoomNumber` int(6) DEFAULT NULL,
-  `Period` int(3) DEFAULT NULL
+  `Period` int(3) DEFAULT NULL,
+  PRIMARY KEY (`WeekDay`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -73,10 +74,11 @@ INSERT INTO `campusroom` (`ID`, `Name`) VALUES
 
 DROP TABLE IF EXISTS `campusschedule`;
 CREATE TABLE IF NOT EXISTS `campusschedule` (
-  `WeekDay` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `WeekDay` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `Period` int(3) DEFAULT NULL,
   `Subject` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `Class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`WeekDay`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
