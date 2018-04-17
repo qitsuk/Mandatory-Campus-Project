@@ -57,7 +57,7 @@
         background-color: #ffffff;
     }
     .mainmenu-area #primary-menu {
-        background-color: #138FC2;
+        background-color: #d52b1d;
     }
     .mainmenu-area #primary-menu ul {
         overflow-y: auto;
@@ -97,3 +97,14 @@
 /* Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+
+/* Our own stuff */
+
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+    .navbar-brand.logo {
+        margin-top: -30px !important;
+        padding-top: 0px !important;
+    }
+}
+
