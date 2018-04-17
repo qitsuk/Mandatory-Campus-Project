@@ -984,4 +984,16 @@ preloader
 
 input {
 	padding-left: 10px;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+.float-left{
+	float:left;
+	margin-top:50px;
+	padding-left:10px;
+	margin:auto;
+	width:50%;
+}
+legend{
+	color:white;
 }

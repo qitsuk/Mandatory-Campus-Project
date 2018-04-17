@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS `campusday` (
   `WeekDay` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `RoomNumber` int(6) DEFAULT NULL,
   `Period` int(3) DEFAULT NULL,
-  PRIMARY KEY (`WeekDay`)
+  PRIMARY KEY (`WeekDay`),
+  FOREIGN KEY (Period) REFERENCES campusschedule(Period)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -54,7 +55,8 @@ DROP TABLE IF EXISTS `campusroom`;
 CREATE TABLE IF NOT EXISTS `campusroom` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` int(6) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (Name) REFERENCES campusday(Room)
 ) ENGINE=MyISAM AUTO_INCREMENT=107 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -78,7 +80,8 @@ CREATE TABLE IF NOT EXISTS `campusschedule` (
   `Period` int(3) DEFAULT NULL,
   `Subject` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Class` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`WeekDay`)
+  PRIMARY KEY (`WeekDay`),
+  FOREIGN KEY (Class) REFERENCES Period(Class)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -99,7 +102,10 @@ DROP TABLE IF EXISTS `period`;
 CREATE TABLE IF NOT EXISTS `period` (
   `Class` int(11) NOT NULL,
   `Subject` int(11) NOT NULL,
-  `Room` int(11) NOT NULL
+  `Room` int(11) NOT NULL,
+  PRIMARY KEY (`Class`),
+
+  FOREIGN KEY (Room) REFERENCES campusroom(Name)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -107,6 +113,14 @@ CREATE TABLE IF NOT EXISTS `period` (
 --
 -- Table structure for table `users`
 --
+
+DROP TABLE IF EXISTS `City`;
+CREATE TABLE IF NOT EXISTS `City` (
+   Zip int NOT NULL,
+    City VARCHAR(255),
+    PRIMARY KEY (Zip),
+);
+
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -122,7 +136,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `IsAdmin` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `IsAdmin` (`IsAdmin`)
+
+  FOREIGN KEY (Zip) REFERENCES City(Zip)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
