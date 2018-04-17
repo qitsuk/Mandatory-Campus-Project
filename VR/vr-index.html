@@ -16,6 +16,12 @@
             <img id="wall2" src="assets/wall2.jpg">
             <a-asset item="" id="materials_mtl" src="assets/materials.mtl"></a-asset>
             <a-asset item="" id="Barrière Balcon SH3D_obj" src="assets/Barrière Balcon SH3D.obj"></a-asset>
+            <a-asset item="" id="modern_staircases_mtl" src="assets/modern_staircase.mtl"></a-asset>
+            <a-asset item="" id="modern_staircase_obj" src="assets/modern_staircase.obj"></a-asset>
+            <a-asset item="" id="SingleStairs_NoFloor.mtl" src="assets/SingleStairs_NoFloor.mtl"></a-asset>
+            <a-asset item="" id="SingleStairs_NoFloor.obj" src="assets/SingleStairs_NoFloor.obj"></a-asset>
+            <a-asset item="" id="text-sign.mtl" src="assets/text-sign.mtl"></a-asset>
+            <a-asset item="" id="text-sign.obj" src="assets/text-sign.obj"></a-asset>
         </a-assets>
 
         <a-entity id="cameraRig">
@@ -29,14 +35,52 @@
         <a-sky id="The Sky" src="#sky" geometry=""></a-sky>
         <a-plane width="50" height="50" rotation="-90 0 0" src="#plane" scale="2 2 2" repeat="50 50" geometry="" position="0.761 0 6.107" ></a-plane>
 
+        <a-entity id="Text Sign-1" obj-model="mtl:assets/text-sign.mtl;obj:assets/text-sign.obj" scale="0.03 0.02 0.02" position="0.066 -0.003 -1.653"></a-entity>
+        <a-box id="Text Sign-1 text background" color="#E0E0E0" depth="2" height="4" width="0.5" position="0.058 2.127 -1.783" geometry="depth:0.01;height:1.32;width:1.4" rotation="-42.15 0 0" material=""></a-box>
+        <a-text value="Welcome to the" position="-0.595 2.535 -2.144" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="VR Experience of" position="-0.595 2.386 -2.009" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="the new EASJ /" position="-0.595 2.236 -1.874" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="ZIBAT Campus at" position="-0.595 2.085 -1.738" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="Maglegaardsvej 2" position="-0.595 1.939 -1.602" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="in Roskilde." position="-0.595 1.787 -1.466" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+
+        <a-entity id="Text Sign-2" obj-model="mtl:assets/text-sign.mtl;obj:assets/text-sign.obj" scale="0.03 0.02 0.02" position="-35.191 -0.003 -22.564" rotation="0 -90 0"></a-entity>
+        <a-box id="Text Sign-2 text background" color="#E0E0E0" depth="2" height="4" width="0.5" position="-35.059 2.127 -22.559" geometry="depth:0.01;height:1.32;width:1.4" rotation="-42.158 -90 0" material=""></a-box>
+        <a-text value="This model is" position="-34.698 2.535 -23.209" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="made to give a" position="-34.832 2.386 -23.197" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="realistic feel," position="-34.969 2.236 -23.209" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="of the real" position="-35.105 2.085 -23.209" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="campus that will" position="-35.236 1.939 -23.209" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="be done in 2019." position="-35.374 1.787 -23.209" rotation="-42.15 -90 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+
+        <a-entity id="Text Sign-3" obj-model="mtl:assets/text-sign.mtl;obj:assets/text-sign.obj" scale="0.03 0.02 0.02" position="9.652 -0.001 46.585"></a-entity>
+        <a-box id="Text Sign-3 text background" color="#E0E0E0" depth="2" height="4" width="0.5" position="9.608 2.132 46.456" geometry="depth:0.01;height:1.32;width:1.4" rotation="-42.15 0 0" material=""></a-box>
+        <a-text value="Roskilde Campus is" position="8.934 2.57 46.066" rotation="-42.15 0 0" text="color:#212121" scale="0.7 0.7 0.7"></a-text>
+        <a-text value="a new educational" position="8.934 2.43 46.19411866115838" rotation="-42.15 0 0" text="color:#212121" scale="0.7 0.7 0.7"></a-text>
+        <a-text value="area for 1500" position="8.934 2.29 46.32" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="students within" position="8.934 2.15 46.448" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="the fields of" position="8.934 2.01 46.574" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="marketing, IT, &amp;" position="8.934 1.87 46.702" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+        <a-text value="food engineering." position="8.934 1.73 46.82751066213162" rotation="-42.15 0 0" text="color:#212121" scale="0.75 0.75 0.75"></a-text>
+
+
+
         <!-- Floor 1 -->
+        <a-entity id="Outside Stairs" obj-model="mtl:assets/modern_staircase.mtl;obj:assets/modern_staircase.obj" scale="1.68 1.95 2.3" position="-27.326 0.06 -16.358999999999998" rotation="0 270 0"></a-entity>
+        <a-box id="Outside Stairs platform" color="#212121" depth="2" height="4" width="0.5" position="-27.068 6.093 -8.888" geometry="depth:4.85;height:0.25;width:3.15" material=""></a-box>
+        <a-entity id="platform railing-1" obj-model="mtl:assets/materials.mtl;obj:assets/Barrière Balcon SH3D.obj" scale="0.006 0.0183 0.018" position="-28.513 6.216 -8.753" rotation="0 90 0"></a-entity>
+        <a-entity id="platform railing-2" obj-model="mtl:assets/materials.mtl;obj:assets/Barrière Balcon SH3D.obj" scale="0.0043 0.0183 0.018" position="-27.0305 6.216 -6.577"></a-entity>
+        <a-cylinder id="support pillar for outside stairs platform" position="-28.224 2.984 -6.865" radius="0.5" height="1.5" color="#212121" geometry="radius:0.3;height:6.25" material=""></a-cylinder>
+        <a-entity id="Inside Stairs" obj-model="mtl:assets/SingleStairs_NoFloor.mtl;obj:assets/SingleStairs_NoFloor.obj" color="#212121" scale="2.5 2.99 3" position="19.463 -0.078 4.102" rotation="0 180 0"></a-entity>
+        <a-box id="Inside Stairs Wall" depth="5" height="5" width="5" position="11.859 2.724 9.979" geometry="depth:0.22;height:5.5;width:11.73" src="#wall" repeat="1 1" rotation="0 90 0" material=""></a-box>
+
           <!-- Roof Frame -->
-        <a-box id="Floor-1 Roof-frame-1" color="black" depth="2" height="4" width="0.5" position="-25.458 5.841 6.755999999999999" geometry="depth:0.2;height:0.75;width:71.88" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Roof-frame-2" color="black" depth="2" height="4" width="0.5" position="28.606 5.841 13.601" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Roof-frame-3" color="black" depth="2" height="4" width="0.5" position="1.577 5.841 42.599" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
-        <a-box id="Floor-1 Roof-frame-4" color="black" depth="2" height="4" width="0.5" position="-2.959 5.841 -29.152" geometry="depth:0.2;height:0.75;width:45.2" ></a-box>
-        <a-box id="Floor-1 Roof-frame-5" color="black" depth="2" height="4" width="0.5" position="24.206 5.841 -15.489" geometry="depth:0.2;height:0.75;width:9" ></a-box>
-        <a-box id="Floor-1 Roof-frame-6" color="black" depth="2" height="4" width="0.5" position="19.711 5.841 -22.346" geometry="depth:0.2;height:0.75;width:13.82" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Roof-frame-1" color="#212121" depth="2" height="4" width="0.5" position="-25.458 5.841 6.755999999999999" geometry="depth:0.2;height:0.75;width:71.88" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Roof-frame-2" color="#212121" depth="2" height="4" width="0.5" position="28.606 5.841 13.601" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Roof-frame-3" color="#212121" depth="2" height="4" width="0.5" position="1.577 5.841 42.599" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
+        <a-box id="Floor-1 Roof-frame-4" color="#212121" depth="2" height="4" width="0.5" position="-2.959 5.841 -29.152" geometry="depth:0.2;height:0.75;width:45.2" ></a-box>
+        <a-box id="Floor-1 Roof-frame-5" color="#212121" depth="2" height="4" width="0.5" position="24.206 5.841 -15.489" geometry="depth:0.2;height:0.75;width:9" ></a-box>
+        <a-box id="Floor-1 Roof-frame-6" color="#212121" depth="2" height="4" width="0.5" position="19.711 5.841 -22.346" geometry="depth:0.2;height:0.75;width:13.82" rotation="0 90 0" ></a-box>
 
           <!-- Glass Walls -->
         <a-box id="Floor-1 Wall-1" depth="5" height="5" width="5" position="-2.903 2.852 -28.996" geometry="depth:0.1;height:5.74;width:45" src="#glasswall" repeat="10 1" material="opacity:0.200"></a-box>
@@ -57,72 +101,72 @@
 
           <!-- Window Frames -->
             <!-- Upper -->
-        <a-box id="Floor-1 Windowframe-upper-1" color="black" depth="2" height="4" width="0.5" position="-2.903 5.362 -28.997" geometry="depth:0.12;height:0.28;width:45"></a-box>
-        <a-box id="Floor-1 Windowframe-upper-2" color="black" depth="2" height="4" width="0.5" position="-25.346 5.361 -6.448" geometry="depth:0.12;height:0.28;width:45.22" rotation="0 90 0"></a-box>
-        <a-box id="Floor-1 Windowframe-upper-3" color="black" depth="2" height="4" width="0.5" position="19.564 5.362 -13.055" geometry="depth:0.12;height:0.28;width:32" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-upper-4" color="black" depth="2" height="4" width="0.5" position="-0.5160000000000001 5.332 15.929" geometry="depth:0.12;height:0.28;width:14" ></a-box>
-        <a-box id="Floor-1 Windowframe-upper-5" color="black" depth="2" height="4" width="0.5" position="-7.456 5.332 22.728" geometry="depth:0.12;height:0.28;width:13.5" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-upper-6" color="black" depth="2" height="4" width="0.5" position="-11.975 5.332 29.418" geometry="depth:0.12;height:0.28;width:9" ></a-box>
-        <a-box id="Floor-1 Windowframe-upper-7" color="black" depth="2" height="4" width="0.5" position="-16.422 5.332 27.134" geometry="depth:0.12;height:0.28;width:4.69" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-upper-1" color="#212121" depth="2" height="4" width="0.5" position="-2.903 5.362 -28.997" geometry="depth:0.12;height:0.28;width:45"></a-box>
+        <a-box id="Floor-1 Windowframe-upper-2" color="#212121" depth="2" height="4" width="0.5" position="-25.346 5.361 -6.448" geometry="depth:0.12;height:0.28;width:45.22" rotation="0 90 0"></a-box>
+        <a-box id="Floor-1 Windowframe-upper-3" color="#212121" depth="2" height="4" width="0.5" position="19.564 5.362 -13.055" geometry="depth:0.12;height:0.28;width:32" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-upper-4" color="#212121" depth="2" height="4" width="0.5" position="-0.5160000000000001 5.332 15.929" geometry="depth:0.12;height:0.28;width:14" ></a-box>
+        <a-box id="Floor-1 Windowframe-upper-5" color="#212121" depth="2" height="4" width="0.5" position="-7.456 5.332 22.728" geometry="depth:0.12;height:0.28;width:13.5" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-upper-6" color="#212121" depth="2" height="4" width="0.5" position="-11.975 5.332 29.418" geometry="depth:0.12;height:0.28;width:9" ></a-box>
+        <a-box id="Floor-1 Windowframe-upper-7" color="#212121" depth="2" height="4" width="0.5" position="-16.422 5.332 27.134" geometry="depth:0.12;height:0.28;width:4.69" rotation="0 90 0" ></a-box>
 
             <!-- Middle -->
-        <a-box id="Floor-1 Windowframe-middle-1" color="black" depth="2" height="4" width="0.5" position="-2.903 4.304 -28.997" geometry="depth:0.12;height:0.08;width:45"></a-box>
-        <a-box id="Floor-1 Windowframe-middle-2" color="black" depth="2" height="4" width="0.5" position="-25.346 4.305 -6.448" geometry="depth:0.12;height:0.08;width:45" rotation="0 90 0"></a-box>
-        <a-box id="Floor-1 Windowframe-middle-3" color="black" depth="2" height="4" width="0.5" position="19.565 4.304 -13.05" geometry="depth:0.12;height:0.08;width:32" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-middle-4" color="black" depth="2" height="4" width="0.5" position="-0.517 4.304 15.929" geometry="depth:0.12;height:0.08;width:14" ></a-box>
-        <a-box id="Floor-1 Windowframe-middle-5" color="black" depth="2" height="4" width="0.5" position="-7.457 4.304 22.718" geometry="depth:0.12;height:0.08;width:13.5" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-middle-6" color="black" depth="2" height="4" width="0.5" position="-11.929337416648117 4.304 29.415" geometry="depth:0.12;height:0.08;width:9" ></a-box>
-        <a-box id="Floor-1 Windowframe-middle-7" color="black" depth="2" height="4" width="0.5" position="-16.421 4.304 27.134" geometry="depth:0.12;height:0.08;width:4.69" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-middle-1" color="#212121" depth="2" height="4" width="0.5" position="-2.903 4.304 -28.997" geometry="depth:0.12;height:0.08;width:45"></a-box>
+        <a-box id="Floor-1 Windowframe-middle-2" color="#212121" depth="2" height="4" width="0.5" position="-25.346 4.305 -6.448" geometry="depth:0.12;height:0.08;width:45" rotation="0 90 0"></a-box>
+        <a-box id="Floor-1 Windowframe-middle-3" color="#212121" depth="2" height="4" width="0.5" position="19.565 4.304 -13.05" geometry="depth:0.12;height:0.08;width:32" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-middle-4" color="#212121" depth="2" height="4" width="0.5" position="-0.517 4.304 15.929" geometry="depth:0.12;height:0.08;width:14" ></a-box>
+        <a-box id="Floor-1 Windowframe-middle-5" color="#212121" depth="2" height="4" width="0.5" position="-7.457 4.304 22.718" geometry="depth:0.12;height:0.08;width:13.5" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-middle-6" color="#212121" depth="2" height="4" width="0.5" position="-11.929337416648117 4.304 29.415" geometry="depth:0.12;height:0.08;width:9" ></a-box>
+        <a-box id="Floor-1 Windowframe-middle-7" color="#212121" depth="2" height="4" width="0.5" position="-16.421 4.304 27.134" geometry="depth:0.12;height:0.08;width:4.69" rotation="0 90 0" ></a-box>
 
             <!-- Lower -->
-        <a-box id="Floor-1 Windowframe-lower-1" color="black" depth="2" height="4" width="0.5" position="-2.903 0.02 -28.997" geometry="depth:0.12;height:0.06;width:45"></a-box>
-        <a-box id="Floor-1 Windowframe-lower-2" color="black" depth="2" height="4" width="0.5" position="-25.375 0.031 -6.446000000000001" geometry="depth:0.12;height:0.06;width:45.22" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-lower-3" color="black" depth="2" height="4" width="0.5" position="19.564 0.02 -13.057" geometry="depth:0.12;height:0.06;width:32" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-lower-4" color="black" depth="2" height="4" width="0.5" position="-0.525 0.02 15.922" geometry="depth:0.12;height:0.06;width:14" ></a-box>
-        <a-box id="Floor-1 Windowframe-lower-5" color="black" depth="2" height="4" width="0.5" position="-7.465 0.02 22.715" geometry="depth:0.12;height:0.06;width:13.5" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-lower-6" color="black" depth="2" height="4" width="0.5" position="-11.93 0.02 29.415" geometry="depth:0.12;height:0.06;width:9.05" ></a-box>
-        <a-box id="Floor-1 Windowframe-lower-7" color="black" depth="2" height="4" width="0.5" position="-16.423 0.03 27.132" geometry="depth:0.12;height:0.06;width:4.685" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-1" color="#212121" depth="2" height="4" width="0.5" position="-2.903 0.02 -28.997" geometry="depth:0.12;height:0.06;width:45"></a-box>
+        <a-box id="Floor-1 Windowframe-lower-2" color="#212121" depth="2" height="4" width="0.5" position="-25.375 0.031 -6.446000000000001" geometry="depth:0.12;height:0.06;width:45.22" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-3" color="#212121" depth="2" height="4" width="0.5" position="19.564 0.02 -13.057" geometry="depth:0.12;height:0.06;width:32" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-4" color="#212121" depth="2" height="4" width="0.5" position="-0.525 0.02 15.922" geometry="depth:0.12;height:0.06;width:14" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-5" color="#212121" depth="2" height="4" width="0.5" position="-7.465 0.02 22.715" geometry="depth:0.12;height:0.06;width:13.5" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-6" color="#212121" depth="2" height="4" width="0.5" position="-11.93 0.02 29.415" geometry="depth:0.12;height:0.06;width:9.05" ></a-box>
+        <a-box id="Floor-1 Windowframe-lower-7" color="#212121" depth="2" height="4" width="0.5" position="-16.423 0.03 27.132" geometry="depth:0.12;height:0.06;width:4.685" rotation="0 90 0" ></a-box>
 
             <!-- In Between -->
-        <a-box id="Floor-1 Windowframe-between-1" color="black" depth="2" height="4" width="0.5" position="19.554 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.1399999999999999"></a-box>
-        <a-box id="Floor-1 Windowframe-between-2" color="black" depth="2" height="4" width="0.5" position="15.081 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-3" color="black" depth="2" height="4" width="0.5" position="10.582 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-4" color="black" depth="2" height="4" width="0.5" position="6.079 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-5" color="black" depth="2" height="4" width="0.5" position="1.579 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-6" color="black" depth="2" height="4" width="0.5" position="-2.921 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-7" color="black" depth="2" height="4" width="0.5" position="-7.419420228809344 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-8" color="black" depth="2" height="4" width="0.5" position="-11.92 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-9" color="black" depth="2" height="4" width="0.5" position="-16.422 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-10" color="black" depth="2" height="4" width="0.5" position="-20.919 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-11" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
-        <a-box id="Floor-1 Windowframe-between-12" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 -24.511" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-13" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 -19.979" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-14" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 -6.517" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-15" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 -2.001" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-16" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 2.501" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-17" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 7.002007304278563" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-18" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 11.504" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-19" color="black" depth="2" height="4" width="0.5" position="-25.351 2.735 16.02362105318376" geometry="depth:0.12;height:5.49;width:0.22000000000000003" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-20" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -24.536" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-21" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -20.039" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-22" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -15.538" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-23" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -11.040764916215185" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-24" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -6.543" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-25" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 -2.044" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-26" color="black" depth="2" height="4" width="0.5" position="19.565 2.735 2.485" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-27" color="black" depth="2" height="4" width="0.5" position="6.056 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-28" color="black" depth="2" height="4" width="0.5" position="1.554 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-29" color="black" depth="2" height="4" width="0.5" position="-2.964 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-30" color="black" depth="2" height="4" width="0.5" position="-7.438 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-31" color="black" depth="2" height="4" width="0.5" position="-7.466 2.735 15.947" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-32" color="black" depth="2" height="4" width="0.5" position="-7.466 2.735 20.432" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-33" color="black" depth="2" height="4" width="0.5" position="-7.466 2.735 24.933" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-34" color="black" depth="2" height="4" width="0.5" position="-7.466 2.735 29.389" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-35" color="black" depth="2" height="4" width="0.5" position="-7.49 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-36" color="black" depth="2" height="4" width="0.5" position="-11.943 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-37" color="black" depth="2" height="4" width="0.5" position="-16.398 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-38" color="black" depth="2" height="4" width="0.5" position="-16.423 2.735 29.39" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-1 Windowframe-between-39" color="black" depth="2" height="4" width="0.5" position="-16.426 2.735 24.901" geometry="depth:0.12;height:5.49;width:0.22" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-1" color="#212121" depth="2" height="4" width="0.5" position="19.554 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.1399999999999999"></a-box>
+        <a-box id="Floor-1 Windowframe-between-2" color="#212121" depth="2" height="4" width="0.5" position="15.081 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-3" color="#212121" depth="2" height="4" width="0.5" position="10.582 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-4" color="#212121" depth="2" height="4" width="0.5" position="6.079 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-5" color="#212121" depth="2" height="4" width="0.5" position="1.579 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-6" color="#212121" depth="2" height="4" width="0.5" position="-2.921 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-7" color="#212121" depth="2" height="4" width="0.5" position="-7.419420228809344 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-8" color="#212121" depth="2" height="4" width="0.5" position="-11.92 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-9" color="#212121" depth="2" height="4" width="0.5" position="-16.422 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-10" color="#212121" depth="2" height="4" width="0.5" position="-20.919 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-11" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 -28.997" geometry="depth:0.12;height:5.49;width:0.17"></a-box>
+        <a-box id="Floor-1 Windowframe-between-12" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 -24.511" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-13" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 -19.979" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-14" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 -6.517" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-15" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 -2.001" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-16" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 2.501" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-17" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 7.002007304278563" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-18" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 11.504" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-19" color="#212121" depth="2" height="4" width="0.5" position="-25.351 2.735 16.02362105318376" geometry="depth:0.12;height:5.49;width:0.22000000000000003" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-20" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -24.536" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-21" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -20.039" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-22" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -15.538" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-23" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -11.040764916215185" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-24" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -6.543" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-25" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 -2.044" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-26" color="#212121" depth="2" height="4" width="0.5" position="19.565 2.735 2.485" geometry="depth:0.12;height:5.49;width:0.14" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-27" color="#212121" depth="2" height="4" width="0.5" position="6.056 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-28" color="#212121" depth="2" height="4" width="0.5" position="1.554 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-29" color="#212121" depth="2" height="4" width="0.5" position="-2.964 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-30" color="#212121" depth="2" height="4" width="0.5" position="-7.438 2.735 15.928" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-31" color="#212121" depth="2" height="4" width="0.5" position="-7.466 2.735 15.947" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-32" color="#212121" depth="2" height="4" width="0.5" position="-7.466 2.735 20.432" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-33" color="#212121" depth="2" height="4" width="0.5" position="-7.466 2.735 24.933" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-34" color="#212121" depth="2" height="4" width="0.5" position="-7.466 2.735 29.389" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-35" color="#212121" depth="2" height="4" width="0.5" position="-7.49 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-36" color="#212121" depth="2" height="4" width="0.5" position="-11.943 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-37" color="#212121" depth="2" height="4" width="0.5" position="-16.398 2.735 29.415" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-38" color="#212121" depth="2" height="4" width="0.5" position="-16.423 2.735 29.39" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-1 Windowframe-between-39" color="#212121" depth="2" height="4" width="0.5" position="-16.426 2.735 24.901" geometry="depth:0.12;height:5.49;width:0.22" rotation="0 90 0" ></a-box>
 
           <!-- Support Pillars -->
             <!-- Support Pillars West -->
@@ -147,6 +191,10 @@
         <a-box id="Floor-2 Floor" depth="5" height="5" width="5" position="1.568 5.842 13.556" geometry="depth:0.75;height:58;width:54" src="#concrete" repeat="1 1" rotation="90 0 0" ></a-box>
         <a-box id="Floor-2 Balcony" depth="5" height="5" width="5" position="-2.892 5.842 -22.267" geometry="depth:0.75;height:13.66;width:45.08" src="#concrete" repeat="1 0.5" rotation="90 0 0"></a-box>
 
+        <a-box id="Floor-2 Stair wall-1" depth="5" height="5" width="5" position="12.086 9.078 9.295" geometry="depth:0.22;height:6.1;width:13.48" src="#wall" repeat="1 1" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-2 Stair wall-2" depth="5" height="5" width="5" position="4.348 9.078 9.295" geometry="depth:0.22;height:6.1;width:13.48" src="#wall" repeat="1 1" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-2 Stair wall-3" depth="5" height="5" width="5" position="8.217 9.078 2.654" geometry="depth:0.22;height:6.1;width:7.95" src="#wall" repeat="1 1" material=""></a-box>
+
           <!-- Balcony Railings -->
         <a-entity id="Balcony Railing-1" obj-model="mtl:assets/materials.mtl;obj:assets/Barrière Balcon SH3D.obj" scale="0.018 0.018 0.018" position="-25.291 6.216 -22.134" rotation="0 90 0"></a-entity>
         <a-entity id="Balcony Railing-2" obj-model="mtl:assets/materials.mtl;obj:assets/Barrière Balcon SH3D.obj" scale="0.018 0.018 0.018" position="-18.604 6.216 -28.948"></a-entity>
@@ -156,63 +204,63 @@
         <a-entity id="Balcony Railing-6" obj-model="mtl:assets/materials.mtl;obj:assets/Barrière Balcon SH3D.obj" scale="0.018 0.018 0.018" position="19.501 6.216 -22.134" rotation="0 270 0"></a-entity>
 
           <!-- Roof Frame -->
-        <a-box id="Floor-2 Roof-frame-1" color="black" depth="2" height="4" width="0.5" position="-25.458 12.296 13.519" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Roof-frame-2" color="black" depth="2" height="4" width="0.5" position="1.577 12.299 42.599" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
-        <a-box id="Floor-2 Roof-frame-3" color="black" depth="2" height="4" width="0.5" position="28.606 12.297882908997957 13.601" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Roof-frame-4" color="black" depth="2" height="4" width="0.5" position="1.577 12.299 -15.496" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
+        <a-box id="Floor-2 Roof-frame-1" color="#212121" depth="2" height="4" width="0.5" position="-25.458 12.296 13.519" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Roof-frame-2" color="#212121" depth="2" height="4" width="0.5" position="1.577 12.299 42.599" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
+        <a-box id="Floor-2 Roof-frame-3" color="#212121" depth="2" height="4" width="0.5" position="28.606 12.297882908997957 13.601" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Roof-frame-4" color="#212121" depth="2" height="4" width="0.5" position="1.577 12.299 -15.496" geometry="depth:0.2;height:0.75;width:54.27" ></a-box>
 
         <!-- Window Frames -->
           <!-- Upper -->
-        <a-box id="Floor-2 Windowframe-upper-1" color="black" depth="2" height="4" width="0.5" position="3.841 11.726 -15.34" geometry="depth:0.12;height:0.6000000000000001;width:41" ></a-box>
-        <a-box id="Floor-2 Windowframe-upper-2" color="black" depth="2" height="4" width="0.5" position="-25.3 11.726 11.536" geometry="depth:0.12;height:0.6000000000000001;width:45.2" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-upper-3" color="black" depth="2" height="4" width="0.5" position="-0.687 11.726 42.441" geometry="depth:0.12;height:0.6000000000000001;width:41" ></a-box>
-        <a-box id="Floor-2 Windowframe-upper-4" color="black" depth="2" height="4" width="0.5" position="28.449 11.726 18.079" geometry="depth:0.12;height:0.6;width:40.7" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-upper-1" color="#212121" depth="2" height="4" width="0.5" position="3.841 11.726 -15.34" geometry="depth:0.12;height:0.6000000000000001;width:41" ></a-box>
+        <a-box id="Floor-2 Windowframe-upper-2" color="#212121" depth="2" height="4" width="0.5" position="-25.3 11.726 11.536" geometry="depth:0.12;height:0.6000000000000001;width:45.2" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-upper-3" color="#212121" depth="2" height="4" width="0.5" position="-0.687 11.726 42.441" geometry="depth:0.12;height:0.6000000000000001;width:41" ></a-box>
+        <a-box id="Floor-2 Windowframe-upper-4" color="#212121" depth="2" height="4" width="0.5" position="28.449 11.726 18.079" geometry="depth:0.12;height:0.6;width:40.7" rotation="0 90 0" ></a-box>
 
           <!-- Middle -->
-        <a-box id="Floor-2 Windowframe-middle-1" color="black" depth="2" height="4" width="0.5" position="3.799 10.387 -15.335" geometry="depth:0.12;height:0.08;width:41.5" ></a-box>
-        <a-box id="Floor-2 Windowframe-middle-2" color="black" depth="2" height="4" width="0.5" position="-25.292 10.387 11.512" geometry="depth:0.12;height:0.08;width:45.2" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-middle-3" color="black" depth="2" height="4" width="0.5" position="-0.689 10.387 42.418" geometry="depth:0.12;height:0.08;width:41.5" ></a-box>
-        <a-box id="Floor-2 Windowframe-middle-4" color="black" depth="2" height="4" width="0.5" position="28.438 10.387 18.071" geometry="depth:0.12;height:0.08;width:41" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-middle-1" color="#212121" depth="2" height="4" width="0.5" position="3.799 10.387 -15.335" geometry="depth:0.12;height:0.08;width:41.5" ></a-box>
+        <a-box id="Floor-2 Windowframe-middle-2" color="#212121" depth="2" height="4" width="0.5" position="-25.292 10.387 11.512" geometry="depth:0.12;height:0.08;width:45.2" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-middle-3" color="#212121" depth="2" height="4" width="0.5" position="-0.689 10.387 42.418" geometry="depth:0.12;height:0.08;width:41.5" ></a-box>
+        <a-box id="Floor-2 Windowframe-middle-4" color="#212121" depth="2" height="4" width="0.5" position="28.438 10.387 18.071" geometry="depth:0.12;height:0.08;width:41" rotation="0 90 0" ></a-box>
 
           <!-- Lower -->
-        <a-box id="Floor-2 Windowframe-lower-1" color="black" depth="2" height="4" width="0.5" position="3.47 6.246 -15.318" geometry="depth:0.12;height:0.06;width:45" ></a-box>
-        <a-box id="Floor-2 Windowframe-lower-2" color="black" depth="2" height="4" width="0.5" position="-25.289 6.246 11.51" geometry="depth:0.12;height:0.06;width:45.4" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-lower-3" color="black" depth="2" height="4" width="0.5" position="-0.4 6.246 42.433" geometry="depth:0.12;height:0.06;width:45" ></a-box>
-        <a-box id="Floor-2 Windowframe-lower-4" color="black" depth="2" height="4" width="0.5" position="28.432 6.246 17.985" geometry="depth:0.12;height:0.06;width:41.42" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-lower-1" color="#212121" depth="2" height="4" width="0.5" position="3.47 6.246 -15.318" geometry="depth:0.12;height:0.06;width:45" ></a-box>
+        <a-box id="Floor-2 Windowframe-lower-2" color="#212121" depth="2" height="4" width="0.5" position="-25.289 6.246 11.51" geometry="depth:0.12;height:0.06;width:45.4" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-lower-3" color="#212121" depth="2" height="4" width="0.5" position="-0.4 6.246 42.433" geometry="depth:0.12;height:0.06;width:45" ></a-box>
+        <a-box id="Floor-2 Windowframe-lower-4" color="#212121" depth="2" height="4" width="0.5" position="28.432 6.246 17.985" geometry="depth:0.12;height:0.06;width:41.42" rotation="0 90 0" ></a-box>
 
           <!-- In Between -->
-        <a-box id="Floor-2 Windowframe-between-1" color="black" depth="2" height="4" width="0.5" position="24.016 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-2" color="black" depth="2" height="4" width="0.5" position="19.634 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-3" color="black" depth="2" height="4" width="0.5" position="10.491 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-4" color="black" depth="2" height="4" width="0.5" position="6.129 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-5" color="black" depth="2" height="4" width="0.5" position="1.517 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-6" color="black" depth="2" height="4" width="0.5" position="-2.875 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-7" color="black" depth="2" height="4" width="0.5" position="-11.97 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-8" color="black" depth="2" height="4" width="0.5" position="-16.355 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-9" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 -10.904" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-10" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 -6.537" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-11" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 2.582" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-12" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 6.959" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-13" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 11.593" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-14" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 15.965" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-15" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 29.594" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-16" color="black" depth="2" height="4" width="0.5" position="-25.294 8.862 33.961145160207685" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-17" color="black" depth="2" height="4" width="0.5" position="-20.854 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-18" color="black" depth="2" height="4" width="0.5" position="-16.498 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-19" color="black" depth="2" height="4" width="0.5" position="-7.367 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-20" color="black" depth="2" height="4" width="0.5" position="-3.005 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-21" color="black" depth="2" height="4" width="0.5" position="1.631 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-22" color="black" depth="2" height="4" width="0.5" position="5.996 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-23" color="black" depth="2" height="4" width="0.5" position="15.128 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-24" color="black" depth="2" height="4" width="0.5" position="19.498 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-25" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 37.996" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-26" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 33.64277456836577" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-27" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 24.956" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-28" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 20.604094127518216" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-29" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 11.472783039550412" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-30" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 7.11978252656085" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-31" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 2.475" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
-        <a-box id="Floor-2 Windowframe-between-32" color="black" depth="2" height="4" width="0.5" position="28.443 8.862 -1.875" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-1" color="#212121" depth="2" height="4" width="0.5" position="24.016 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-2" color="#212121" depth="2" height="4" width="0.5" position="19.634 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-3" color="#212121" depth="2" height="4" width="0.5" position="10.491 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-4" color="#212121" depth="2" height="4" width="0.5" position="6.129 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-5" color="#212121" depth="2" height="4" width="0.5" position="1.517 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-6" color="#212121" depth="2" height="4" width="0.5" position="-2.875 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-7" color="#212121" depth="2" height="4" width="0.5" position="-11.97 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-8" color="#212121" depth="2" height="4" width="0.5" position="-16.355 8.862 -15.333" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-9" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 -10.904" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-10" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 -6.537" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-11" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 2.582" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-12" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 6.959" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-13" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 11.593" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-14" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 15.965" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-15" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 29.594" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-16" color="#212121" depth="2" height="4" width="0.5" position="-25.294 8.862 33.961145160207685" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-17" color="#212121" depth="2" height="4" width="0.5" position="-20.854 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-18" color="#212121" depth="2" height="4" width="0.5" position="-16.498 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-19" color="#212121" depth="2" height="4" width="0.5" position="-7.367 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-20" color="#212121" depth="2" height="4" width="0.5" position="-3.005 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-21" color="#212121" depth="2" height="4" width="0.5" position="1.631 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-22" color="#212121" depth="2" height="4" width="0.5" position="5.996 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-23" color="#212121" depth="2" height="4" width="0.5" position="15.128 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-24" color="#212121" depth="2" height="4" width="0.5" position="19.498 8.862 42.425" geometry="depth:0.12;height:5.49;width:0.17" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-25" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 37.996" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-26" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 33.64277456836577" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-27" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 24.956" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-28" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 20.604094127518216" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-29" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 11.472783039550412" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-30" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 7.11978252656085" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-31" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 2.475" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Windowframe-between-32" color="#212121" depth="2" height="4" width="0.5" position="28.443 8.862 -1.875" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" ></a-box>
 
           <!-- South Walls -->
         <a-box id="Floor-2 Wall-1" depth="5" height="5" width="5" position="26.334 8.698 -15.322" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" ></a-box>
@@ -250,18 +298,127 @@
           <!-- West Walls -->
         <a-box id="Floor-2 Wall-28" depth="5" height="5" width="5" position="28.429 8.698 40.319" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" rotation="0 90 0" ></a-box>
         <a-box id="Floor-2 Wall-29" depth="5" height="5" width="5" position="28.427 8.698 35.828" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.200" rotation="0 90 0"></a-box>
-        <a-box id="Floor-2 Wall-30" depth="5" height="5" width="5" position="28.429 8.698 29.302" geometry="depth:0.3;height:6.45;width:8.56" src="#wall2" repeat="0.5 1" rotation="0 90 0" ></a-box>
+        <a-box id="Floor-2 Wall-30" depth="5" height="5" width="5" position="28.429 8.698 29.302" geometry="depth:0.3;height:6.45;width:8.56" src="#wall2" repeat="1 1" rotation="0 90 0" ></a-box>
         <a-box id="Floor-2 Wall-31" depth="5" height="5" width="5" position="28.429 8.698 40.319" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" rotation="0 90 0" ></a-box>
         <a-box id="Floor-2 Wall-32" depth="5" height="5" width="5" position="28.427 8.698 22.791" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.200" rotation="0 90 0"></a-box>
         <a-box id="Floor-2 Wall-33" depth="5" height="5" width="5" position="28.429 8.698 16.043" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" rotation="0 90 0"></a-box>
         <a-box id="Floor-2 Wall-34" depth="5" height="5" width="5" position="28.427 8.698 9.294" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.200" rotation="0 90 0"></a-box>
         <a-box id="Floor-2 Wall-35" depth="5" height="5" width="5" position="28.429 8.698 4.798" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" rotation="0 90 0"></a-box>
         <a-box id="Floor-2 Wall-36" depth="5" height="5" width="5" position="28.427 8.698 0.303" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.200" rotation="0 90 0"></a-box>
-        <a-box id="Floor-2 Wall-37" depth="5" height="5" width="5" position="28.441 8.698 -8.688" geometry="depth:0.3;height:6.45;width:13.5" src="#wall2" repeat="1 1"  rotation="0 90 0"></a-box>
+        <a-box id="Floor-2 Wall-37" depth="5" height="5" width="5" position="28.441 8.698 -8.688" geometry="depth:0.3;height:6.45;width:13.5" src="#wall2" repeat="1.5 1"  rotation="0 90 0"></a-box>
 
 
         <!-- Floor 3 -->
         <a-box id="Floor-3 Floor" depth="5" height="5" width="5" position="1.568 12.3 13.556" geometry="depth:0.75;height:58;width:54" src="#concrete" repeat="1 1" rotation="90 0 0" ></a-box>
+        <a-box id="Floor-3 Roof" depth="5" height="5" width="5" position="1.568 18.793 13.556" geometry="depth:0.75;height:58;width:54" src="#concrete" repeat="1 1" rotation="90 0 0" material=""></a-box>
+        <a-box id="Floor-3 Roofbox-1" depth="5" height="5" width="5" position="1.952 20.649 9.079" geometry="depth:3;height:30;width:25" src="#concrete" repeat="1 1" rotation="90 0 0" material=""></a-box>
+        <a-box id="Floor-3 Roofbox-2" depth="5" height="5" width="5" position="12.89 22.606 4.066" geometry="depth:7;height:20;width:10" src="#concrete" repeat="1 1" rotation="90 0 0" material=""></a-box>
+
+        <!-- Roof Frame -->
+        <a-box id="Floor-3 Roof-frame-1" color="#212121" depth="2" height="4" width="0.5" position="1.577 18.791 -15.496" geometry="depth:0.2;height:0.75;width:54.27" material=""></a-box>
+        <a-box id="Floor-3 Roof-frame-2" color="#212121" depth="2" height="4" width="0.5" position="-25.458 18.791 13.519" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Roof-frame-3" color="#212121" depth="2" height="4" width="0.5" position="1.577 18.791 42.599" geometry="depth:0.2;height:0.75;width:54.27" material=""></a-box>
+        <a-box id="Floor-3 Roof-frame-4" color="#212121" depth="2" height="4" width="0.5" position="28.606 18.791 13.601" geometry="depth:0.2;height:0.75;width:58.2" rotation="0 90 0" material=""></a-box>
+
+
+        <!-- Window Frames -->
+
+          <!-- Upper -->
+        <a-box id="Floor-3 Windowframe-upper-1" color="#212121" depth="2" height="4" width="0.5" position="-25.3 18.122 15.858" geometry="depth:0.12;height:0.6;width:45.2" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-upper-2" color="#212121" depth="2" height="4" width="0.5" position="3.776 18.122 42.441" geometry="depth:0.12;height:0.6000000000000001;width:41" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-upper-3" color="#212121" depth="2" height="4" width="0.5" position="28.449 18.122 11.309" geometry="depth:0.12;height:0.6;width:45.4" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-upper-4" color="#212121" depth="2" height="4" width="0.5" position="-0.689 18.122 -15.34" geometry="depth:0.12;height:0.6000000000000001;width:41" material=""></a-box>
+
+          <!-- Middle -->
+        <a-box id="Floor-3 Windowframe-middle-1" color="#212121" depth="2" height="4" width="0.5" position="-25.292 16.82958668507061 15.906" geometry="depth:0.12;height:0.08;width:45.4" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-middle-2" color="#212121" depth="2" height="4" width="0.5" position="3.779 16.83 42.418" geometry="depth:0.12;height:0.08;width:41.5" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-middle-3" color="#212121" depth="2" height="4" width="0.5" position="28.438 16.83 11.313" geometry="depth:0.12;height:0.08;width:45" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-middle-4" color="#212121" depth="2" height="4" width="0.5" position="-0.695 16.83 -15.335" geometry="depth:0.12;height:0.08;width:41.5" material=""></a-box>
+
+          <!-- Lower -->
+        <a-box id="Floor-3 Windowframe-lower-1" color="#212121" depth="2" height="4" width="0.5" position="-25.289 12.703 15.828" geometry="depth:0.12;height:0.06;width:45.4" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-lower-2" color="#212121" depth="2" height="4" width="0.5" position="3.795 12.703 42.433" geometry="depth:0.12;height:0.06;width:45" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-lower-3" color="#212121" depth="2" height="4" width="0.5" position="28.432 12.703 11.28" geometry="depth:0.12;height:0.06;width:45" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-lower-4" color="#212121" depth="2" height="4" width="0.5" position="-0.579 12.703 -15.318" geometry="depth:0.12;height:0.06;width:41.5" material=""></a-box>
+
+          <!-- In Between -->
+        <a-box id="Floor-3 Windowframe-between-1" color="#212121" depth="2" height="4" width="0.5" position="19.485 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-2" color="#212121" depth="2" height="4" width="0.5" position="15.153 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-3" color="#212121" depth="2" height="4" width="0.5" position="5.992 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-4" color="#212121" depth="2" height="4" width="0.5" position="1.654 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-5" color="#212121" depth="2" height="4" width="0.5" position="-3.005 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-6" color="#212121" depth="2" height="4" width="0.5" position="-7.347 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-7" color="#212121" depth="2" height="4" width="0.5" position="-16.501 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-8" color="#212121" depth="2" height="4" width="0.5" position="-20.846 15.273 -15.333" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-9" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 -6.385" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-10" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 -2.0777817848532583" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-11" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 6.987" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-12" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 11.281284390567981" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-13" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 15.945" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-14" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 20.261" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-15" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 33.819255305126504" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-16" color="#212121" depth="2" height="4" width="0.5" position="-25.294 15.273 38.144" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-17" color="#212121" depth="2" height="4" width="0.5" position="-16.349 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-18" color="#212121" depth="2" height="4" width="0.5" position="-12.015 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-19" color="#212121" depth="2" height="4" width="0.5" position="-2.855 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-20" color="#212121" depth="2" height="4" width="0.5" position="1.4670815131354682 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-21" color="#212121" depth="2" height="4" width="0.5" position="6.130104794011884 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-22" color="#212121" depth="2" height="4" width="0.5" position="10.455516024851683 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-23" color="#212121" depth="2" height="4" width="0.5" position="19.617 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-24" color="#212121" depth="2" height="4" width="0.5" position="23.954 15.273 42.425" geometry="depth:0.12;height:5.49;width:0.17" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-25" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 33.57610697811179" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-26" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 29.24551012006358" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-27" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 15.682" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-28" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 11.354574507035736" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-29" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 6.691" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-30" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 2.37" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-31" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 -6.6915090608613506" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Windowframe-between-32" color="#212121" depth="2" height="4" width="0.5" position="28.443 15.273 -11.01173051486715" geometry="depth:0.12;height:5.49;width:0.17" rotation="0 90 0" material=""></a-box>
+
+          <!-- South Walls -->
+        <a-box id="Floor-3 Wall-1" depth="5" height="5" width="5" position="24.054 15.194 -15.322" geometry="depth:0.3;height:6.45;width:8.97" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-2" depth="5" height="5" width="5" position="17.322 15.194 -15.322" geometry="depth:0.09999999999999998;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-3" depth="5" height="5" width="5" position="10.575 15.194 -15.322" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-4" depth="5" height="5" width="5" position="3.827 15.194 -15.322" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-5" depth="5" height="5" width="5" position="-0.676 15.194 -15.322" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-6" depth="5" height="5" width="5" position="-5.176 15.194 -15.322" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-7" depth="5" height="5" width="5" position="-11.926 15.194 -15.322" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-8" depth="5" height="5" width="5" position="-18.676 15.194 -15.322" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-9" depth="5" height="5" width="5" position="-23.176 15.194 -15.322" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" material=""></a-box>
+
+          <!-- East Walls -->
+        <a-box id="Floor-3 Wall-10" depth="5" height="5" width="5" position="-25.284 15.194 -10.964" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-11" depth="5" height="5" width="5" position="-25.284 15.194 -4.215" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-12" depth="5" height="5" width="5" position="-25.284 15.194 2.455" geometry="depth:0.3;height:6.45;width:8.9" src="#wall2" repeat="1 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-13" depth="5" height="5" width="5" position="-25.284 15.194 9.144" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-14" depth="5" height="5" width="5" position="-25.284 15.194 13.613" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-15" depth="5" height="5" width="5" position="-25.284 15.194 18.101" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-16" depth="5" height="5" width="5" position="-25.284 15.194 27.04" geometry="depth:0.3;height:6.45;width:13.4" src="#wall2" repeat="1.5 1" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Wall-17" depth="5" height="5" width="5" position="-25.284 15.194 35.974" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-18" depth="5" height="5" width="5" position="-25.284 15.194 40.381" geometry="depth:0.3;height:6.45;width:4.32" src="#wall2" repeat="0.5 1" material="" rotation="0 90 0"></a-box>
+
+          <!-- North Walls -->
+        <a-box id="Floor-3 Wall-19" depth="5" height="5" width="5" position="-20.924 15.194 42.405" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-20" depth="5" height="5" width="5" position="-14.182 15.194 42.41" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-21" depth="5" height="5" width="5" position="-7.433999999999999 15.194 42.405" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-22" depth="5" height="5" width="5" position="-0.691 15.194 42.41" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-23" depth="5" height="5" width="5" position="3.798 15.194 42.41" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-24" depth="5" height="5" width="5" position="8.293 15.194 42.41" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-25" depth="5" height="5" width="5" position="15.037 15.194 42.405" geometry="depth:0.3;height:6.45;width:9" src="#wall2" repeat="1 1" material=""></a-box>
+        <a-box id="Floor-3 Wall-26" depth="5" height="5" width="5" position="21.786 15.194 42.41" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2"></a-box>
+        <a-box id="Floor-3 Wall-27" depth="5" height="5" width="5" position="26.294 15.194 42.41" geometry="depth:0.3;height:6.45;width:4.52" src="#wall2" repeat="0.5 1" material=""></a-box>
+
+          <!-- West Walls -->
+        <a-box id="Floor-3 Wall-28" depth="5" height="5" width="5" position="28.419 15.194 38.106" geometry="depth:0.3;height:6.45;width:8.9" src="#wall2" repeat="1 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-29" depth="5" height="5" width="5" position="28.419 15.194 31.41" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-30" depth="5" height="5" width="5" position="28.419 15.194 22.464" geometry="depth:0.3;height:6.45;width:13.4" src="#wall2" repeat="1.5 1" rotation="0 90 0" material=""></a-box>
+        <a-box id="Floor-3 Wall-31" depth="5" height="5" width="5" position="28.419 15.194 13.519" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-32" depth="5" height="5" width="5" position="28.419 15.194 9.023" geometry="depth:0.3;height:6.45;width:4.5" src="#wall2" repeat="0.5 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-33" depth="5" height="5" width="5" position="28.419 15.194 4.533" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-34" depth="5" height="5" width="5" position="28.419 15.194 -2.161" geometry="depth:0.3;height:6.45;width:8.9" src="#wall2" repeat="1 1" material="" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-35" depth="5" height="5" width="5" position="28.419 15.194 -8.848" geometry="depth:0.1;height:6.45;width:4.5" src="#glasswall" repeat="1 1" material="opacity:0.2" rotation="0 90 0"></a-box>
+        <a-box id="Floor-3 Wall-36" depth="5" height="5" width="5" position="28.419 15.194 -13.267000000000001" geometry="depth:0.3;height:6.45;width:4.3500000000000005" src="#wall2" repeat="0.5 1" material="" rotation="0 90 0"></a-box>
+
 
 
     </a-scene>
