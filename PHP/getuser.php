@@ -1,8 +1,10 @@
 <?php
 include_once "dbfactory.php";
-$q = "SELECT FirstName, LastName, UserName FROM WebshopUsers WHERE Username='McBruce'";
+$q = "SELECT * FROM WebshopUsers";
 $result = mysqli_query($dbc, $q);
 
-while ($row = $result -> fetch_assoc()) {
-    echo json_encode($row);
+$resultArray = array();
+while ($row = $result -> fetch_array(MYSQLI_NUM)) {
+    array_push($resultArray, $row);
 }
+echo json_encode($resultArray);
