@@ -4,18 +4,22 @@
         <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
         <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="hellojs.js"></script>
+        <script src="json_factory.js"></script>
     </head>
     <body style="margin: 0px; overflow: hidden;">
         <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
             <a-marker preset="custom" type="pattern" url='104.patt'>
-                    <a-box position="0 0.5 0" material="color: blue;"></a-box>
+                    <a-image position="0 0.5 0" src="dickbutt.png" rotation="-90 0 0"></a-image>
             </a-marker>
             <a-marker preset="custom" type="pattern" url="105.patt">
-                <a-entity geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double;opacity:0.5" width: 1.5; color: "#fff" position="0 0 0.001" scale="2 2 2" rotation="-90 0 0"></a-entity>
-                <!-- <a-plane width="1.5" height="0.6" color="black" opacity="0.5" side="double" rotation="-90 0 0" position="0 0 0">
-                    <a-text position="-10 0 0" color="red" value="This is another little test"></a-text>
-                </a-plane> -->
+                <a-entity id="theentity" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
+                <script>
+                    var theString = "";
+                    for (var i = 0; i < testObj.length; i++) {
+                        theString += "Hello " + testObj[i].FirstName + ". Your username is " + testObj[i].Username + "!\\n";
+                    }  
+                    document.getElementById("theentity").setAttribute("text", "value: " + theString);
+                </script>
             </a-marker>
             <a-marker preset="custom" type="pattern" url="106.patt">
                 <a-box position="0 0.5 0" material="color: green;"></a-box>

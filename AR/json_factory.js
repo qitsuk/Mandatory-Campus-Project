@@ -4,7 +4,4 @@ xhr.send();
 
 var testObj = JSON.parse(xhr.responseText);
 
-console.log(testObj[1]);
-
-// console.log(xhr.status);
-// console.log(xhr.responseText);
+console.log(testObj[0].FirstName);
