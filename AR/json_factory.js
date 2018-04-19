@@ -6,14 +6,15 @@
 
 
 function getScheduleForRoom(roomNumber) {
-    console.log("The method gets called here: " + roomNumber);
-    var sendData = function() {
-        $.post('https://campus.qitsuk.dk/php/get_schedule.php', {
-          data: roomNumber
-        }, function(response) {
-          console.log(response);
-        });
-    }
+
 }
 
-getScheduleForRoom(104);
+var sendData = function(roomNumber) {
+    $.post('https://campus.qitsuk.dk/php/get_schedule.php', {
+      data: roomNumber
+    }, function(response) {
+      console.log(response);
+    });
+}
+
+sendData(104);

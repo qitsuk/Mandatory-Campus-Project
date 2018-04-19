@@ -155,32 +155,40 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+DROP TABLE CampusSchedule;
 
 CREATE TABLE CampusSchedule (
 	ID INT AUTO_INCREMENT PRIMARY KEY,
-    Weekday VARCHAR(8),
+    Weekday TINYINT,
     ClassRoom INT(3),
     Class VARCHAR(50),
     Period INT(3),
     Subject VARCHAR(50)
 );
 
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 1, 'PHP');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 2, 'PHP');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 3, 'PHP');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 4, 'PHP');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 5, 'AR/VR');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 6, 'AR/VR');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 7, 'AR/VR');
-INSERT INTO CampusSchedule VALUES (0, 'Wed', 104, 'ro17wd2u2-2u', 8, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 1, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 2, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 3, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 4, 'PHP');
 
-SELECT * FROM CampusSchedule;
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 1, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 2, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 3, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 4, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 5, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 6, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 7, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 8, 'AR/VR');
 
-INSERT INTO campusday (WeekDay, RoomNumber) VALUES ('Wednesday', 115);
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 1, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 2, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 3, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 4, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 5, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 6, 'Game Development');
 
-SELECT * FROM campusday;
+SELECT * FROM CampusSchedule WHERE ClassRoom=104 AND WeekDay=4 ORDER BY Period ASC;
 
-DELETE FROM campusday WHERE WeekDay = '';
 
 DELIMITER //
 CREATE TRIGGER testing_before BEFORE INSERT ON campusday FOR EACH ROW
@@ -193,3 +201,15 @@ END //
 DELIMITER ;
 DROP TRIGGER IF EXISTS testing_before;
 INSERT INTO campusday (WeekDay, RoomNumber, Period) VALUES ('Friday', 110, 19);
+
+
+DELIMITER $$
+
+CREATE PROCEDURE SelectingUsers()
+BEGIN
+SELECT * FROM users;
+END $$
+
+DELIMITER ;
+
+CALL SelectingUsers;
