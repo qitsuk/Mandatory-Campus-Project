@@ -6,7 +6,7 @@
 
 
 function getScheduleForRoom(roomNumber) {
-
+    sendData(roomNumber);
 }
 
 var sendData = function(roomNumber) {
@@ -17,4 +17,4 @@ var sendData = function(roomNumber) {
     });
 }
 
-sendData(104);
+getScheduleForRoom(104);

@@ -201,15 +201,20 @@ END //
 DELIMITER ;
 DROP TRIGGER IF EXISTS testing_before;
 INSERT INTO campusday (WeekDay, RoomNumber, Period) VALUES ('Friday', 110, 19);
+SELECT * FROM users;
 
+DROP PROCEDURE CountAdmins;
 
 DELIMITER $$
 
-CREATE PROCEDURE SelectingUsers()
+
+CREATE PROCEDURE CountAdmins(
+	isAdmin INT
+)
 BEGIN
-SELECT * FROM users;
+SELECT COUNT(*) AS 'Number of Admins' FROM users WHERE users.IsAdmin=isAdmin;
 END $$
 
 DELIMITER ;
 
-CALL SelectingUsers;
+CALL CountAdmins(1);
