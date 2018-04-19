@@ -1,6 +1,6 @@
 <?php
 include_once "dbfactory.php";
-$q = "SELECT * FROM WebshopUsers";
+$q = "SELECT * FROM CampusSchedule;";
 $result = mysqli_query($dbc, $q);
 
 $resultArray = array();

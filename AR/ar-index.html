@@ -14,9 +14,10 @@
             <a-marker preset="custom" type="pattern" url="105.patt">
                 <a-entity id="theentity" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
                 <script>
-                    var theString = "";
-                    for (var i = 0; i < testObj.length; i++) {
-                        theString += "Hello " + testObj[i].FirstName + ". Your username is " + testObj[i].Username + "!\\n";
+                    var theString = "Schedule for Room " + scheduleArray[0].ClassRoom + "\\n";
+                    for (var i = 0; i < scheduleArray.length; i++) {
+                        theString += scheduleArray[i].Weekday + " - " + scheduleArray[i].Class + " - " + 
+                        scheduleArray[i].Period + " - " + scheduleArray[i].Subject + " - " +  "\\n";
                     }  
                     document.getElementById("theentity").setAttribute("text", "value: " + theString);
                 </script>

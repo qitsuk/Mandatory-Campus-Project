@@ -1,7 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://campus.qitsuk.dk/php/getuser.php", false);
+xhr.open("GET", "https://campus.qitsuk.dk/php/get_schedule.php", false);
 xhr.send();
 
-var testObj = JSON.parse(xhr.responseText);
-
-console.log(testObj[0].FirstName);
+var scheduleArray = JSON.parse(xhr.responseText);
