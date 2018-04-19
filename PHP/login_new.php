@@ -8,11 +8,18 @@
 
 include_once 'dbfactory.php';
 
-$username = $_POST['username'];
-$password = $_POST['password'];
 
 $salt1 = 'JhnYjuml9p';
 $salt2 = 'Gldh7jUy65';
 
 $hashedPassword = hash('whirlpool', '$salt1$password$salt2');
 
+$stmt = $dbc->prepare("SELECT * FROM users WHERE Username=?");
+echo $dbc->error_list;
+$stmt->bind_param('s', $username);
+$username = 'qitsuk';//$_POST['username'];
+$password = 'test';//$_POST['password'];
+$stmt->execute();
+$stmt->bind_result($user);
+$stmt->fetch();
+echo $user;

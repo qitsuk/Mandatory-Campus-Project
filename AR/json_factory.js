@@ -1,7 +1,20 @@
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://campus.qitsuk.dk/php/getuser.php", false);
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://campus.qitsuk.dk/php/get_schedule.php", false);
+// xhr.send();
 
-var testObj = JSON.parse(xhr.responseText);
+// var scheduleArray = JSON.parse(xhr.responseText);
 
-console.log(testObj[0].FirstName);
+
+function getScheduleForRoom(roomNumber) {
+    sendData(roomNumber);
+}
+
+var sendData = function(roomNumber) {
+    $.post('https://campus.qitsuk.dk/php/get_schedule.php', {
+      data: roomNumber
+    }, function(response) {
+      console.log(response);
+    });
+}
+
+getScheduleForRoom(104);

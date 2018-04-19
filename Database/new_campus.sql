@@ -92,6 +92,7 @@ INSERT INTO `campusschedule` (`WeekDay`, `Period`, `Subject`, `Class`) VALUES
 ('Monday', NULL, 'Php', 'ro17wd2u2-2u'),
 ('Tuesday', NULL, 'VR/AR', 'ro17wd2u2-2u');
 
+
 -- --------------------------------------------------------
 
 --
@@ -115,10 +116,10 @@ CREATE TABLE IF NOT EXISTS `period` (
 --
 
 DROP TABLE IF EXISTS `City`;
-CREATE TABLE IF NOT EXISTS `City` (
+CREATE TABLE IF NOT EXISTS `city` (
    Zip int NOT NULL,
     City VARCHAR(255),
-    PRIMARY KEY (Zip),
+    PRIMARY KEY (Zip)
 );
 
 
@@ -153,3 +154,67 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+DROP TABLE CampusSchedule;
+
+CREATE TABLE CampusSchedule (
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+    Weekday TINYINT,
+    ClassRoom INT(3),
+    Class VARCHAR(50),
+    Period INT(3),
+    Subject VARCHAR(50)
+);
+
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 1, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 2, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 3, 'PHP');
+INSERT INTO CampusSchedule VALUES (0, 4, 106, 'ro17wd2u2-2u', 4, 'PHP');
+
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 1, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 2, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 3, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 4, 'Database');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 5, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 6, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 7, 'AR/VR');
+INSERT INTO CampusSchedule VALUES (0, 4, 105, 'ro17wd2u2-2u', 8, 'AR/VR');
+
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 1, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 2, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 3, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 4, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 5, 'Game Development');
+INSERT INTO CampusSchedule VALUES (0, 4, 104, 'ro17wd2u2-2u', 6, 'Game Development');
+
+SELECT * FROM CampusSchedule WHERE ClassRoom=104 AND WeekDay=4 ORDER BY Period ASC;
+
+
+DELIMITER //
+CREATE TRIGGER testing_before BEFORE INSERT ON campusday FOR EACH ROW
+BEGIN
+IF (SELECT NEW.Period) > 8 || (SELECT NEW.Period) < 1
+	THEN SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT='Not a valid period.';
+END IF;
+END //
+DELIMITER ;
+DROP TRIGGER IF EXISTS testing_before;
+INSERT INTO campusday (WeekDay, RoomNumber, Period) VALUES ('Friday', 110, 19);
+SELECT * FROM users;
+
+DROP PROCEDURE CountAdmins;
+
+DELIMITER $$
+
+
+CREATE PROCEDURE CountAdmins(
+	isAdmin INT
+)
+BEGIN
+SELECT COUNT(*) AS 'Number of Admins' FROM users WHERE users.IsAdmin=isAdmin;
+END $$
+
+DELIMITER ;
+
+CALL CountAdmins(1);

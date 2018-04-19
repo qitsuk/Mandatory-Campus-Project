@@ -12,14 +12,9 @@
                     <a-image position="0 0.5 0" src="dickbutt.png" rotation="-90 0 0"></a-image>
             </a-marker>
             <a-marker preset="custom" type="pattern" url="105.patt">
-                <a-entity id="theentity" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
-                <script>
-                    var theString = "";
-                    for (var i = 0; i < testObj.length; i++) {
-                        theString += "Hello " + testObj[i].FirstName + ". Your username is " + testObj[i].Username + "!\\n";
-                    }  
-                    document.getElementById("theentity").setAttribute("text", "value: " + theString);
-                </script>
+                <!-- <a-entity id="theentity" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity> -->
+                <a-box position="0 0.5 0" color="red";></a-box>
+                <script>getScheduleForRoom(104);</script>
             </a-marker>
             <a-marker preset="custom" type="pattern" url="106.patt">
                 <a-box position="0 0.5 0" material="color: green;"></a-box>
