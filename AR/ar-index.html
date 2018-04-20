@@ -11,17 +11,38 @@
     <body style="margin: 0px; overflow: hidden;">
         <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
             <a-marker id="first_marker" preset="custom" type="pattern" url='104.patt'>
-                <a-entity id="104plane" geometry="primitive: plane; width: 1.8; height: 0.9" text="value: Somin' is wrong!!" material="color: black;side:double; width: 1.5; color: red" position="0 0.5 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
+                <a-entity id="104plane" image="src:easj_logo.png; height: 100; width:200" geometry="primitive: plane; width: 0.5; height: 1; src:easj_logo.png;" text="value: Somin' is wrong!!"
+                 material="side:double; width: 1.5; color: white" position="0 0.5 0.001" scale="2 2 2" rotation="-90 0 0"></a-entity>
                 <!-- <a-text id="test104" geometry="primitive: plane; color:black; opacity: 0.5;" rotation="-90 0 0"></a-text> -->
                     <script>
-                        var theString = "Schedule for Room " + room104Schedule[0].ClassRoom + "\\n";
+                        var period;
+                        var theString = "Schedule for Room " + room104Schedule[0].ClassRoom + " on "+ room104Schedule[0].Weekday +":\\n";
                         for (var i = 0; i < room104Schedule.length; i++) {
-                            theString += room104Schedule[i].Class + " - " + 
-                            room104Schedule[i].Period + " - " + room104Schedule[i].Subject + "\\n";
+                            if (room104Schedule[i].Period == 1) {
+                                theString += "From 08:20 - 09:05:\\n";
+                            } else if (room104Schedule[i].Period == 2) {
+                                theString += "From 09:10 - 09:55:\\n";
+                            } else if (room104Schedule[i].Period == 3) {
+                                theString += "From 10:05 - 10:50:\\n";
+                            } else if (room104Schedule[i].Period == 4) {
+                                theString += "From 10:55 - 11:40:\\n";
+                            } else if (room104Schedule[i].Period == 5) {
+                                theString += "From 12:15 - 13:00:\\n";
+                            } else if (room104Schedule[i].Period == 6) {
+                                theString += "From 13:05 - 13:50:\\n";
+                            } else if (room104Schedule[i].Period == 7) {
+                                theString += "From 14:00 - 14:45:\\n";
+                            } else if (room104Schedule[i].Period == 8) {
+                                theString += "From 14:55 - 15:40:\\n";
+                            }
+                            theString += "Subject: " + room104Schedule[i].Subject + "\\n";
+                            theString += "Class: " + room104Schedule[i].Class + "\\n\\n\\n";
                         }
-                        document.getElementById("104plane").setAttribute("text", "value: " + theString + ";align:center;");
+                        document.getElementById("104plane").setAttribute("text", "color: black;value: " + theString + ";align:center;baseline: bottom;");
                     </script>
             </a-marker>
+
+
             <a-marker id="room105marker" preset="custom" type="pattern" url="105.patt">
                 <a-entity id="105plane" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
                 <script>
@@ -33,6 +54,8 @@
                         document.getElementById("105plane").setAttribute("text", "value: " + theString);
                     </script>
             </a-marker>
+
+
             <a-marker preset="custom" type="pattern" url="106.patt">
                     <a-entity id="106plane" geometry="primitive: plane; width: 1.5; height: 0.6" text="value: Hello!!" material="color: black;side:double; width: 1.5; color: red" position="0 0 0.001" scale="1 1 1" rotation="-90 0 0"></a-entity>
                     <script>
