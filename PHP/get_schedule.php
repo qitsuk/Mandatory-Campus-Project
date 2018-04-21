@@ -31,7 +31,6 @@ if (isset($_GET['data'])) {
 //    echo "<br>$q";
 }
 $result = mysqli_query($dbc, $q);
-//echo "<br>Right here, is where it should have just established the connection to the db!<br>";
 $resultArray = array();
 while ($row = $result -> fetch_assoc()) {
     array_push($resultArray, $row);
